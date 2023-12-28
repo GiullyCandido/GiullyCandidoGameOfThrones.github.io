@@ -1,0 +1,1084 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'GOT'; /* Nombre que asignarás a tu fuente */
+    src: url('Tipografia/GameofThrones.ttf') format('truetype'); 
+    
+  }
+
+/* Estilos para pantallas menores o iguales a 767px de ancho*/
+
+/*MENU*/
+body{
+    background-color: #000000;
+}
+#hamburguesa{
+    display: none;
+}
+
+#barra{
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    position: fixed;
+    list-style: none;
+    background-color: rgba(23, 23, 21, 0.337);
+    height: 12%;
+    width: 100%;
+    z-index: 100;
+}
+
+header nav ul li a{
+    color: beige;
+    text-decoration: none;
+    font-size: 1.5em;  
+}
+
+header nav ul li a:hover{
+    /* Sombra: desplazamiento horizontal, desplazamiento vertical, expansión de la sombra */
+    filter: drop-shadow(2px 8px 3px rgba(255, 255, 255, 0.636));
+}
+/*FINAL CODIGO MENU*/
+
+#home img{
+    display: flex;
+    margin: auto;
+}
+#historiaContenedor h1{
+    display: none;
+}
+
+#HistoriaContenedor{
+    scroll-margin-top: 16em;
+    width: 65%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+#HistoriaContenedor p{
+    text-align: justify;
+    font-size: 1.5em; 
+    color: rgb(173, 173, 173);
+    columns: 30px 2;
+    margin-bottom: 2%;
+}
+#hHistoriaContenedor div{
+    width: 100%;
+}
+
+/*Videos*/
+.videos{
+    max-width: 760px;
+    max-height: 515px;
+    width: 90vw;
+    height: calc(80vw*315/560);
+    margin: auto;
+}
+
+.videos iframe{
+    width: 100%;
+    height: 100%;
+}
+
+/*Video2*/
+.contenedorVideo{
+    color: #cecece;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 6%;
+}
+
+.contenedorVideo h2{
+    font-family: "GOT";
+    font-size: 1em;
+    text-shadow: 0px 0px 4px rgba(205, 205, 205, 0.54);
+}
+
+.contenedorVideo p{
+    padding: 1%;
+    width: 80%;
+}
+.contenedorVideo em,
+.contenedorVideo strong{
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+/*Galeria Temporadas*/
+#HistoriaContenedor h2{
+    color: rgb(173, 173, 173);
+    padding: 4%;
+    font-size: 2em;
+    text-align: center;
+    font-family: 'GOT';
+    text-shadow: 0px 0px 4px rgba(205, 205, 205, 0.54);
+    
+}
+.galeriaTemporadas h2{
+    flex-direction: column;
+}
+
+.galeriaTemporadas{
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+
+.galeriaTemporadas img{
+    aspect-ratio: 9/16;
+    min-width: 0;
+    flex: 1 1 5%;
+    object-fit: cover;
+    opacity: .7;
+    transition: .5s;
+}
+
+.galeriaTemporadas img:hover{
+    flex: 1 1 10%;
+    opacity: 1;
+}
+
+
+/*GALERIA DE PERSONAJES*/
+
+#contenedorPersonajes{
+    scroll-margin-top: 5.5em;
+    width: 55%;
+    place-items: center; /* Esto centrará el contenido del contenedor en el centro del grid */
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1%;
+    margin: 1% auto 1% auto;
+    place-items: center;
+}
+
+#contenedorPersonajes h2{
+    color: rgb(173, 173, 173);
+    grid-column: 1/3;
+    font-family: 'GOT';
+    text-shadow: 0px 0px 4px rgba(205, 205, 205, 0.54);
+    margin-top: 2%;
+}
+
+/*Nombres Personajes*/
+.subcontenedor1 > :nth-child(1),
+.subcontenedor2 > :nth-child(1),
+.subcontenedor3 > :nth-child(1),
+.subcontenedor4 > :nth-child(1),
+.subcontenedor5 > :nth-child(1),
+.subcontenedor6 > :nth-child(1),
+.subcontenedor7 > :nth-child(1)
+{
+    position: relative;
+    font-family: 'GOT';
+    font-size: 1.3em;
+    padding-top: 3%;
+    color: rgb(173, 173, 173);
+    font-weight: 600;
+    text-shadow: 2px 2px 2px #e4e4e44c;
+}
+/*Ocultar Button mobile*/
+.subcontenedor1 > :nth-child(4),
+.subcontenedor2 > :nth-child(4),
+.subcontenedor3 > :nth-child(4),
+.subcontenedor4 > :nth-child(4),
+.subcontenedor5 > :nth-child(4),
+.subcontenedor6 > :nth-child(4),
+.subcontenedor7 > :nth-child(4)
+{
+    display: none;
+    margin-bottom: 0;
+}
+
+/*Asegurar que la img cubra completamente el contenedor, manteniendo su proporcion*/
+.subcontenedor1 > img,
+.subcontenedor2 > img,
+.subcontenedor3 > img,
+.subcontenedor4 > img,
+.subcontenedor5 > img,
+.subcontenedor6 > img,
+.subcontenedor7 > img{
+    object-fit: contain;
+}
+
+
+
+/*Subcontenedor1*/
+.subcontenedor1{
+    position: relative;
+    grid-column: 1/3;
+    width: 100%;
+    background: linear-gradient(to bottom, #00000000, #878787a1);
+    border-radius: 5%;
+    border-top: 4px inset;
+    border-bottom: 4px inset; 
+
+}
+
+/*Texto Hover*/
+.subcontenedor1 > :nth-child(2) {
+    position: absolute;
+    color: #33353c;
+    background: linear-gradient(to bottom, #ffffffc8, #878787a1);
+    border-radius: 5.5%;
+    display: none;
+    font-weight: 800;
+    font-size: 1.3em;
+    top: -1.1%;
+    padding: 24.6% 5% 24.6% 5%;
+}
+
+.subcontenedor1:hover > :nth-child(2) {
+    display: block;
+}
+
+/*Subcontenedor 2*/
+.subcontenedor2{
+    position: relative;
+    grid-column: 1/2;
+    width: 100%;
+    background: linear-gradient(to bottom, #ffcc0000, #878787a1);
+    border-radius: 5%;
+    border-top: 4px inset;
+    border-bottom: 4px inset;
+}
+
+
+/*Texto Hover*/
+.subcontenedor2 > :nth-child(2) {
+    display: none;
+    position: absolute;
+    background: linear-gradient(to bottom, #ffffffc8, #878787a1);
+    font-weight: 800;
+    font-size: 1.3em;
+    border-radius: 5%;
+    text-align: justify;
+    color: #212121;
+    top: -1.1%;
+    padding: 23.8% 5% 23.9% 5%;
+}
+
+.subcontenedor2:hover > :nth-child(2){
+    display: block;
+}
+
+/*Contenedor3*/
+.subcontenedor3{
+    position: relative;
+    grid-column: 2/3;
+    width: 100%;
+    background: linear-gradient(to bottom, #ffcc0000, #878787a1);
+    border-radius: 5%;
+    border-top: 4px inset;
+    border-bottom: 4px inset;
+}
+
+/*Texto Hover*/
+.subcontenedor3 > :nth-child(2) {
+    display: none;
+    position: absolute;
+    background: linear-gradient(to bottom, #ffffffc8, #878787a1);
+    font-weight: 800;
+    font-size: 1.3em;
+    border-radius: 5%;
+    text-align: justify;
+    color: #212121;
+    top: -1.1%;
+    padding: 20.6% 5% 20.6% 5%;
+}
+
+.subcontenedor3:hover > :nth-child(2){
+    display: block;
+}
+
+/*Contenedor4*/
+.subcontenedor4{
+    position: relative;
+    grid-column: 1/3;
+    width: 100%;
+    background: linear-gradient(to bottom, #ffcc0000, #878787a1);
+    border-radius: 5%;
+    border-top: 4px inset;
+    border-bottom: 4px inset;
+}
+
+/*Texto Hover*/
+.subcontenedor4 > :nth-child(2) {
+    position: absolute;
+    color: #33353c;
+    background: linear-gradient(to bottom, #ffffffc8, #878787a1);
+    border-radius: 5%;
+    display: none;
+    font-weight: 800;
+    font-size: 1.3em;
+    top: -1.1%;
+    padding: 22.7% 5% 22.7% 5%;
+}
+
+.subcontenedor4:hover > :nth-child(2) {
+    display: block;
+}
+
+/*Contenedor5*/
+.subcontenedor5{
+    position: relative;
+    grid-column: 1/2;
+    width: 100%;
+    background: linear-gradient(to bottom, #ffcc0000, #878787a1);
+    border-radius: 5%;
+    border-top: 4px inset;
+    border-bottom: 4px inset;
+}
+
+.subcontenedor5 > :nth-child(2) {
+    display: none;
+    position: absolute;
+    background: linear-gradient(to bottom, #ffffffc8, #878787a1);
+    font-weight: 800;
+    font-size: 1.3em;
+    border-radius: 5%;
+    text-align: justify;
+    color: #212121;
+    top: -1.1%;
+    padding: 17.5% 5% 17.5% 5%;
+}
+
+.subcontenedor5:hover > :nth-child(2){
+    display: block;
+}
+
+/*Contenedor 6*/
+.subcontenedor6{
+    position: relative;
+    grid-column: 2/3;
+    width: 100%;
+    background: linear-gradient(to bottom, #ffcc0000, #878787a1);
+    border-radius: 5%;
+    border-top: 4px inset;
+    border-bottom: 4px inset;
+}
+
+/*Texto Hover*/
+.subcontenedor6 > :nth-child(2) {
+    display: none;
+    position: absolute;
+    background: linear-gradient(to bottom, #ffffffc8, #878787a1);
+    border-radius: 5%;
+    font-weight: 800;
+    font-size: 1.3em;
+    text-align: justify;
+    color: #212121;
+    top: -1.1%;
+    padding: 20.6% 5% 20.6% 5%;
+}
+
+.subcontenedor6:hover > :nth-child(2){
+    display: block;
+}
+
+.subcontenedor7{
+    position: relative;
+    width: 100%;
+    grid-column: 1/3;
+    background: linear-gradient(to bottom, #ffcc0000, #878787a1);
+    border-radius: 5%;
+    border-top: 4px inset;
+    border-bottom: 4px inset;
+}
+
+/*Texto Hover*/
+.subcontenedor7 > :nth-child(2) {
+    position: absolute;
+    color: #33353c;
+    background: linear-gradient(to bottom, #ffffffc8, #878787a1);
+    border-radius: 5%;
+    display: none;
+    font-weight: 800;
+    font-size: 1.3em;
+    top: -1.1%;
+    padding-top: 22.7%;
+    padding-bottom: 22.7%;
+}
+
+.subcontenedor7:hover > :nth-child(2) {
+    display: block;
+}
+
+
+/*Section Casas:*/
+#contenedorCasas{
+    scroll-margin-top: 7em;
+    margin-top: 13%;
+    color: rgb(173, 173, 173);
+}
+#contenedorCasas h2{
+    font-family: GOT;
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 0px 0px 4px rgba(205, 205, 205, 0.54);
+}
+
+#contenedorCasas ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    justify-content: center; /* Centra horizontalmete los elementos hijos */
+    width: 85%;
+    margin: auto;
+    list-style-type: none;
+}
+
+ /*Texto casas*/
+#contenedorCasas ul :nth-child(even){
+    text-align: justify;
+    flex-basis: 65%;
+    margin: 4% 1% 4% 1%;
+    font-size: 1.4em;
+}
+
+#contenedorCasas ul :nth-child(odd){
+    border-radius: 50%;
+    flex-basis: 20%;
+    margin: 4% 1% 4% 1%;
+
+}
+
+#contenedorCasas li strong{
+    font-family: "GOT";
+    font-size: 1em;
+    text-shadow: 0px 0px 4px rgba(205, 205, 205, 0.54);
+}
+
+
+/*Mapa*/
+#contenedorMapaWasteros{
+    scroll-margin-top: 5.2em;
+    color: rgb(173, 173, 173);
+    margin: auto;
+    width: 90%;
+}
+#contenedorMapaWasteros div{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#contenedorMapaWasteros div > h2{
+    font-family: GOT;
+    text-shadow: 0px 0px 4px rgba(205, 205, 205, 0.54);
+    text-align: center;
+    margin-bottom: 1%;
+    grid-column: 1/3;
+    font-size: 2em;
+    
+}
+
+#contenedorMapaWasteros div > p{
+    grid-column: 2/3;
+    background: linear-gradient(to bottom, #2f2f31a0, #878787a1);
+    height: fit-content;
+    width: 90%;
+    padding: 3%;
+    font-size: 1.5em;
+    border-style: inset;
+    margin: auto;
+}
+#contenedorMapaWasteros div > img{
+    object-fit: cover;
+    grid-column: 1/2;
+}
+
+/*fORM*/
+#formulario{
+    scroll-margin-top: 4em;
+    color:  rgb(173, 173, 173);
+    display: flex;
+    justify-content: center; /* Centra el form horizontalmente */
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 1.5em;
+}
+
+#formulario form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    padding: 3%;
+    border-style: inset;
+    box-shadow: 0em 0em .8em rgba(91, 90, 98, 0.89);
+    background: linear-gradient(to bottom, #2f2f3100 85%,  #1f1f1fa1, #878787a1);
+}
+
+#formulario form h2{
+    font-family: GOT;
+    margin-bottom: 2%;
+    text-shadow: 0px 0px 4px rgba(205, 205, 205, 0.54);
+    font-size: 1.1em;
+}
+#formulario form label{
+    margin: 1% 0% 1% 0%;
+    font-size: 1em;
+}
+
+#formulario form input{
+    width: min-content;
+    margin: 1% 0% 1% 0%;
+    padding: 0.5%;
+    color: #212121;
+    border-style: inset;
+    font-size: 0.8em;
+}
+
+#formulario form button{
+    margin-top: 2%;
+    padding: 0.5%;
+    font-family: GOT;
+    color:  rgb(59, 59, 59);
+    font-size: 0.8em;
+}
+
+#formulario form button:hover{
+    background-color: #272727;
+    color: #cecece;
+    filter: drop-shadow(2px 8px 3px rgba(255, 255, 255, 0.636));
+   
+}
+
+label{
+    font-weight: 500;
+    color: #cecece;
+}
+
+#formulario strong,
+#formulario em{
+    font-style: normal;
+    font-weight: 100;
+}
+
+.cajaDeTexto{
+    width: 40%;
+    height: 5em;
+    margin: 1% 0% 1% 0%;
+    padding: 0.6%;
+    font-size: 1em;
+}
+
+
+#casasGOT{
+    margin: 1% 0% 1% 0%;
+    padding: 0.7%;
+    font-size: 0.7em;
+    color: #5c5c5c;
+}
+
+#pieDePagina{
+    height: 4em;
+    background-color: #7979797c;
+    color: #cecece;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+#pieDePagina img{
+    object-fit: contain;
+    margin-right: 0.5%;
+}
+
+/*Menu Hamburguesa Smartphone y Tablet*/
+@media screen and (min-width: 100px) and (max-width: 991px) {
+        /*MENU HAMBURGUESA*/
+        #hamburguesa{
+            display: block;
+        }
+        header{
+            height: 4.3em;
+            line-height: 4em;
+            background-color: rgba(23, 23, 21, 0.337);
+            color: #cecece;
+            text-align:justify;
+            font-family: "GOT";
+        }
+        #hamburguesa li:last-child{
+           display: none;
+        }
+        
+        #barra{
+          display: none;
+        }
+    
+        nav:target #barra{
+            display: block;
+
+        }
+    
+        nav:target #hamburguesa li:first-child{
+            display: none;
+        }
+    
+        nav:target #hamburguesa li:last-child{
+            display: block;
+        }
+    
+        nav{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    
+        #hamburguesa li{
+            list-style: none;
+            text-indent: -100px;
+            overflow: hidden;  
+            text-indent: 0em;
+            width: 5em;
+            background-color: #cecece67;
+    
+        }
+    
+        #hamburguesa li a{
+            background: url(Imagenes/iconomenu.png), no-repeat;
+            background-color: rgba(23, 23, 21, 0.337);
+            background-size: cover;
+            display: block;
+            height: 3em;
+            margin-top: -5%;
+        }
+    
+        #barra{
+            width: 100%;
+            height: calc(100vh);
+            position: absolute;
+            top: 4.25em;
+            /*animacion del aparecimiento menu*/
+            left: -100%;
+            transition: left 0.5s ease;
+            /*animacion del aparecimiento menu*/
+            background: #212121;
+            text-align: start;
+        }
+        
+        nav:target #barra{
+            left: 0;
+        }
+    
+        /*Ocultar logo mobile*/
+        .logoEscritorio{
+            display: none;
+        }
+    
+        #barra li a{
+            background-color: #353535;
+            padding: 4%;
+        }
+    
+        #barra li{
+            padding: 5% 0% 5% 3%;
+            text-shadow: 0px 0px 4px rgba(205, 205, 205, 0.54);
+        }
+    
+}
+
+/*Smartphone*/
+@media screen and (max-width: 608px) {
+    section img{
+        width: 95%;
+    }
+
+    #barra li{
+        font-size: 0.8em;
+    }
+
+    #HistoriaContenedor{
+        scroll-margin-top: 5.3em;
+        width: 90%;
+    }
+    #HistoriaContenedor > p{
+        columns: 1;
+        font-size: 1.3em;
+
+    }
+    /*Galeria temporadas*/
+    .galeriaTemporadas{
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan (caigan a la siguiente línea) */
+    }
+    .galeriaTemporadas img {
+        flex: 1 1 50%; /* 50% de ancho para mostrar 2 imágenes por línea */
+        margin: 0; /* Elimina cualquier margen que pueda estar presente */
+    }
+
+    .galeriaTemporadas img:hover{
+        flex:  1 1 50%;
+        opacity: 1;
+    }
+
+    
+
+
+    /*PERSONAJES*/
+    #contenedorPersonajes{
+        scroll-margin-top: 0.8em;
+        width: 95%;
+        margin: 5% auto 5% auto;
+    }
+
+        /*Borrando el hover de la web*/
+        .subcontenedor1:hover > :nth-child(2), 
+        .subcontenedor2:hover > :nth-child(2), 
+        .subcontenedor3:hover > :nth-child(2), 
+        .subcontenedor4:hover > :nth-child(2),
+        .subcontenedor5:hover > :nth-child(2),
+        .subcontenedor6:hover > :nth-child(2),
+        .subcontenedor7:hover > :nth-child(2)
+        {
+            display: none;
+        }
+    
+        /*Estilos para el parrafo*/
+        .subcontenedor1 > :nth-child(2),
+        .subcontenedor2 > :nth-child(2),
+        .subcontenedor3 > :nth-child(2),
+        .subcontenedor4 > :nth-child(2),
+        .subcontenedor5 > :nth-child(2),
+        .subcontenedor6 > :nth-child(2),
+        .subcontenedor7 > :nth-child(2)
+        {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background: none;
+            color: #cecece;
+            padding: 3%;
+            font-weight: 500;
+            text-align: justify;
+            /*Programar button*/
+            display: none;
+            transform: translateY(-100%);
+        }
+        
+        /*Button*/
+        .subcontenedor1 .mostrarBtn,
+        .subcontenedor2 .mostrarBtn,
+        .subcontenedor3 .mostrarBtn,
+        .subcontenedor4 .mostrarBtn,
+        .subcontenedor5 .mostrarBtn,
+        .subcontenedor6 .mostrarBtn,
+        .subcontenedor7 .mostrarBtn
+        {
+           display: inline;
+           padding: 2%;
+           border-radius: 5%;
+           font-size: 1em;
+           margin-bottom: 2%;
+           background-color: rgba(255, 255, 255, 0);
+           font-size: 1.3em;
+           border-style: groove;
+           border-color: #cecece;
+           box-shadow: 0em 0em .5em rgb(165, 165, 165);
+           border-width: 0.2em;
+           margin-top: 1%;
+           color: #cecece;
+           text-shadow: 0em 0em .5em rgb(165, 165, 165);
+        }
+    
+        /*Accion mostrar contenido oculto:
+        La pseudo-clase ":focus-within" indica que cuando cualquier descendiente del .subcontenedor 1 (hijo o nieto)
+        este en focus/enfocado ocurra el codigo entre{}.*/
+        .subcontenedor1:focus-within :nth-child(2),
+        .subcontenedor2:focus-within :nth-child(2),
+        .subcontenedor3:focus-within :nth-child(2),
+        .subcontenedor4:focus-within :nth-child(2),
+        .subcontenedor5:focus-within :nth-child(2),
+        .subcontenedor6:focus-within :nth-child(2),
+        .subcontenedor7:focus-within :nth-child(2)
+        {
+            display: flex;
+            transform: translateY(0);
+        }
+    
+
+    .subcontenedor2, .subcontenedor3, .subcontenedor5, .subcontenedor6{
+        grid-column: 1/3;
+    }
+
+    .subcontenedor1,
+    .subcontenedor2,
+    .subcontenedor3,
+    .subcontenedor4,
+    .subcontenedor5,
+    .subcontenedor6,
+    .subcontenedor7{
+                    height: fit-content;
+                    width: 99%;
+    }
+
+    .subcontenedor7 img{
+        object-fit: cover;
+    }
+
+
+    /*CASAS*/
+    #contenedorCasas{
+        scroll-margin-top: 0.9em;
+        margin-top: 70%;  
+    }
+
+    
+    #contenedorCasas li strong{
+        font-size: 0.9em;
+    }
+
+    #contenedorCasas ul{
+        width: 99%;
+    }
+
+    /*Imagenes*/
+    #contenedorCasas ul :nth-child(odd){
+        flex-basis: 70%;
+    }
+    /*Texto*/
+    #contenedorCasas ul :nth-child(even){
+        flex-basis: 90%;
+        font-size: 1.5em;
+    }
+
+    /*Section Mapa*/
+    #contenedorMapaWasteros{
+        scroll-margin-top: 1em;
+    }
+
+    #contenedorMapaWasteros div{
+        grid-template-columns: 1fr;
+        margin: 10% auto 10% auto;
+        width: 98%;
+    }
+    #contenedorMapaWasteros div > h2{
+        text-align: center;
+        margin-bottom: 7%;
+
+    }
+
+    #contenedorMapaWasteros div > p{
+        padding: 3%;
+        grid-column: 1/2;
+        text-align: center;
+        justify-self: center;
+        font-size: 1.3em;
+        margin: 5% auto 5% auto;
+    }
+
+    .videos{
+        width: 90vw;
+    }
+
+    /*FORMULARIO*/
+    #formulario{
+        scroll-margin-top: 0.9em;
+        margin: 10% auto 10% auto;
+        font-size: 1.3em;
+    }
+    #formulario form{
+        width: 100%;
+        padding: 0;
+    }
+
+    #formulario h3{
+        margin: 2%;
+    }
+
+    .itensForm{
+        padding: 0.3em 0 0.3em 0;
+        
+    }
+
+    #formulario form button{
+        padding: 3.5%;
+    }
+
+    form div{
+        width: 80%;
+        margin: auto;
+    }
+
+
+}
+
+@media screen and (min-width: 609px) and (max-width: 1180px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    section img{
+        width: 95%;
+    }
+    /*Historia*/
+    #HistoriaContenedor{
+        scroll-margin-top: 8em;
+        width: 90%;
+        columns: 50px 1;
+        font-weight: 500;
+        font-size: 1em;
+    }
+    /*Personajes*/
+    #contenedorPersonajes{
+        width: 90%;
+        scroll-margin-top: 0.8em;
+    }
+    
+      /*Borrando el hover de la web*/
+      .subcontenedor1:hover > :nth-child(2), 
+      .subcontenedor2:hover > :nth-child(2), 
+      .subcontenedor3:hover > :nth-child(2), 
+      .subcontenedor4:hover > :nth-child(2),
+      .subcontenedor5:hover > :nth-child(2),
+      .subcontenedor6:hover > :nth-child(2),
+      .subcontenedor7:hover > :nth-child(2)
+      {
+          display: none;
+      }
+  
+      /*Estilos para el parrafo*/
+      .subcontenedor1 > :nth-child(2),
+      .subcontenedor2 > :nth-child(2),
+      .subcontenedor3 > :nth-child(2),
+      .subcontenedor4 > :nth-child(2),
+      .subcontenedor5 > :nth-child(2),
+      .subcontenedor6 > :nth-child(2),
+      .subcontenedor7 > :nth-child(2)
+      {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          background: none;
+          color: #cecece;
+          padding: 3%;
+          font-weight: 500;
+          text-align: justify;
+          font-size: 1.6em;
+          /*Programar button*/
+          display: none;
+          transform: translateY(-100%);
+      }
+      
+      /*Button*/
+      .subcontenedor1 .mostrarBtn,
+      .subcontenedor2 .mostrarBtn,
+      .subcontenedor3 .mostrarBtn,
+      .subcontenedor4 .mostrarBtn,
+      .subcontenedor5 .mostrarBtn,
+      .subcontenedor6 .mostrarBtn,
+      .subcontenedor7 .mostrarBtn
+      {
+         display: inline;
+         padding: 2%;
+         border-radius: 5%;
+         font-size: 1em;
+         margin-bottom: 2%;
+         background-color: rgba(255, 255, 255, 0);
+         font-size: 1.3em;
+         border-style: groove;
+         border-color: #cecece;
+         box-shadow: 0em 0em .5em rgb(165, 165, 165);
+         border-width: 0.2em;
+         margin-top: 1%;
+         color: #cecece;
+         text-shadow: 0em 0em .5em rgb(165, 165, 165);
+
+      }
+  
+      /*Accion mostrar contenido oculto:
+      La pseudo-clase ":focus-within" indica que cuando cualquier descendiente del .subcontenedor 1 (hijo o nieto)
+      este en focus/enfocado ocurra el codigo entre{}.*/
+      .subcontenedor1:focus-within :nth-child(2),
+      .subcontenedor2:focus-within :nth-child(2),
+      .subcontenedor3:focus-within :nth-child(2),
+      .subcontenedor4:focus-within :nth-child(2),
+      .subcontenedor5:focus-within :nth-child(2),
+      .subcontenedor6:focus-within :nth-child(2),
+      .subcontenedor7:focus-within :nth-child(2)
+      {
+          display: flex;
+          transform: translateY(0);
+      }
+
+      .subcontenedor1 img,
+      .subcontenedor4 img,
+      .subcontenedor5 img,
+      .subcontenedor6 img
+      {
+        object-fit: contain;
+      }
+
+
+    /*Casas*/
+    #contenedorCasas{
+        scroll-margin-top: 0.8em;
+        width: 100%;
+        margin: 20% auto 8% auto;
+
+    }
+    #contenedorCasas ul{
+        width: 99%;
+    }
+    /*Imagenes*/
+    #contenedorCasas ul :nth-child(odd){
+        flex-basis: 55%;
+        margin: 2% 0 2% 0;
+    }
+    /*Texto*/
+    #contenedorCasas ul :nth-child(even){
+        flex-basis: 85%;
+    }
+
+     /*Section Mapa*/
+     #contenedorMapaWasteros{
+     scroll-margin-top: 0.8em;
+     }
+     #contenedorMapaWasteros div{
+        grid-template-columns: 1fr;
+        margin: 5% auto 5% auto;
+        width: 98%;
+    }
+    #contenedorMapaWasteros div > h2{
+        text-align: center;
+        margin-bottom: 7%;
+
+    }
+    
+    #contenedorMapaWasteros div > p{
+        padding: 3%;
+        grid-column: 1/2;
+        text-align: center;
+        justify-self: center;
+        font-size: 1.3em;
+        margin: 5% auto 5% auto;
+        width: 80%;
+    }
+
+    #contenedorMapaWasteros div > img{
+        width: 80%;
+        margin: auto;
+    }
+
+    .contenedorVideo p{
+        font-size: 1em;
+    }
+
+    #formulario{
+        scroll-margin-top: 0.8em;
+    }
+ 
+}
